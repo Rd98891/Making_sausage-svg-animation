@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #51578E;
+  padding: 20px;
+}
+#cover{
+ animation: open 1s linear 1s;
+ transform-origin: bottom right;
+ transform-box : fill-box;
+ animation-fill-mode: forwards;
+}
+@keyframes open {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(60deg);
+  }
+}
+#smoke{
+  animation: blow 3s linear 3s;
+  animation-fill-mode: forwards;
+  visibility: visible;
+ transition-duration: 3s;
+}
+@keyframes blow {
+from{opacity: 0;transform: translateY(-50px); }
+15%{opacity: 0.5; transform: translateY(-50px); }
+28%{opacity: 0.8; transform: translateY(-50px); }
+40%{opacity: 1; transform: translateY(-50px); }
+50%{opacity: 0.8; transform: translateY(-50px); }
+60%{opacity: 0.6;transform: translateY(-50px);}
+80%{opacity: 0.4;transform: translateY(-50px);}
+90%{opacity: 0.2; transform: translateY(-50px); }
+to{opacity: 0; transform: translateY(-50px);}
+
+}
